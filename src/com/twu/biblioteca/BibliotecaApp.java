@@ -22,8 +22,8 @@ public class BibliotecaApp {
 
     public String getBookList(Library lib) {
         String s = "";
-        for (String book : lib.getBooks()) {
-            s += book + "\n";
+        for (Book book : lib.getBooks()) {
+            s += book.toString() + "\n";
         }
         return s;
     }

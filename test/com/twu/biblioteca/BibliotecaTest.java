@@ -16,8 +16,10 @@ public class BibliotecaTest {
     public void testPrintBooks() {
         BibliotecaApp app = new BibliotecaApp();
         Library lib = new Library();
-        String bookList = "Winnie the Pooh\nThe Little Prince\nBad Feminist\n";
+        Book b1 = new Book("Winnie the Pooh", "A. A. Milne", 1926);
+        Book b2 = new Book("The Little Prince", "Antoine de Saint-Exupery", 1943);
+        Book b3 = new Book("Bad Feminist", "Roxane Gay", 2014);
+        String bookList = b1.toString() + "\n" + b2.toString() + "\n" + b3.toString() + "\n";
         assertEquals(bookList, app.getBookList(lib));
-
     }
 }
