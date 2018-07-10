@@ -1,5 +1,7 @@
 package com.twu.biblioteca;
 
+import java.util.ArrayList;
+
 public class BibliotecaApp {
 
     private Library l;
@@ -9,7 +11,7 @@ public class BibliotecaApp {
         Library lib = new Library();
 
         System.out.println(app.getWelcome());
-        System.out.println(app.getBookList(lib));
+        System.out.println(app.buildBookListString(lib.getBooks()));
     }
 
     public BibliotecaApp() {
@@ -20,9 +22,9 @@ public class BibliotecaApp {
         return "Hello, welcome to Biblioteca!\n";
     }
 
-    public String getBookList(Library lib) {
+    public String buildBookListString(ArrayList<Book> books) {
         String s = "";
-        for (Book book : lib.getBooks()) {
+        for (Book book : books) {
             s += book.toString() + "\n";
         }
         return s;
